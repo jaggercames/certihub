@@ -1,0 +1,237 @@
+body {
+  background-color: #f1f1f1f1;
+  font-family: 'Poppins', sans-serif;
+  margin: 0; /* Remove margin do body */
+  padding-top: 80px; /* Ajusta a altura da navbar fixa para que o conteúdo não fique escondido */
+  box-sizing: border-box; /* Para que o padding e margin não causem overflow */
+}
+
+.hr-line {
+  width: calc(100% - 580px); /* 40px de cada lado */
+  border: none;
+  border-top: 1px solid #ccc; /* ou a cor que quiser */
+}
+
+/*----------------------------------------*/
+
+/*Header-Start*/
+
+.navbar-container {
+  background-color: #f1f1f1;
+  position: fixed;
+  top: 0; /* Fixa no topo da tela */
+  left: 0; /* Fixa à esquerda */
+  width: 100%; /* Garante que ocupe toda a largura da tela */
+  cursor: pointer;
+  margin: 0; /* Remove margens para garantir que o conteúdo fique alinhado */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px; /* Adiciona um espaçamento interno */
+  z-index: 1000; /* Garante que o navbar fique acima de outros elementos */
+  box-sizing: border-box; /* Faz com que padding e border não aumentem a largura */
+  box-shadow: -3px 3px 3px 1px rgba(0, 0, 0, 0.034);
+}
+
+.navbar-brand {
+  user-select: none;
+  font-weight: bold;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar-brand i{
+  transition: all 0.5s ease-in-out;
+}
+.navbar-brand:hover i{
+  color: #01DFC0;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-content {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar-content a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.navbar-content-a:hover {
+  color: #01DFC0;
+  transition: all 0.3s ease;
+}
+
+.navbar-content-a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;                   
+  height: 2px;                   
+  background-color: currentColor; 
+  color: #01DFC0;
+  transition: width 0.3s ease; 
+}
+
+.navbar-content-a:hover::after {
+  width: 100%;
+  color: #01DFC0;      
+}
+
+.navbar-a-button {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-a-button:hover {
+  background-color: #84f7e7;
+  transition: all 0.2s ease-in-out;
+}
+
+/*Header-End*/
+
+/*Main-Start*/
+
+.main-first-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-first-text t {
+  background-color: #04C5AB;
+  color: white;
+}
+
+.main-first-text p {
+  color: rgb(66, 66, 66);
+}
+
+.a-button-01 {
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  border: solid 1px #a0a0a0;
+  padding: 12px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+.a-button-01 i {
+  margin-right: 6px;
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.6s ease;
+  white-space: nowrap; /* garante que não quebre */
+  color: #04C5AB;
+}
+
+.a-button-01:hover i {
+  max-width: 35px; /* tamanho ideal pro ícone */
+  opacity: 1;
+}
+
+.a-button-01:hover {
+  box-shadow: -3px 3px 3px 1px rgba(0, 0, 0, 0.090);
+}
+
+.a-button-01:active {
+  background-color: #01DFC0;
+}
+
+
+.main-first-div {
+  width: 1600px;
+  height: 500px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px;
+  border-radius: 50px;
+}
+
+.main-first-image img{
+  height: 620px;
+}
+
+.main-first-partners {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-first-partners img {
+  height: 50px;
+
+}
+
+.main-second-div {
+  justify-content: center;
+  padding: 50px;
+  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.main-second-div > div {
+  flex-basis: calc(33.33% - 20px); /* Isso faz cada item ocupar 1/3 do espaço, considerando o gap */
+  max-width: calc(33.33% - 20px); /* Evita que os itens ultrapassem o limite de 3 por linha */
+}
+
+@media (max-width: 768px) {
+  .main-second-div > div {
+    flex-basis: calc(50% - 20px); /* Em telas menores, exibe 2 itens por linha */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-second-div > div {
+    flex-basis: 100%; /* Em telas muito pequenas, exibe 1 item por linha */
+    max-width: 100%;
+  }
+}
+
+.main-second-div img {
+  margin-left: 30px;
+  height: 180px;
+}
+
+.second-div-green g {
+  color: #c0fff7;
+}
+
+.second-div-green {
+  font-weight: bold;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 1px black;
+  background-color: #04C5AB;
+  width: 600px;
+  height: 300px;
+  padding: 48px;
+  border-radius: 25px;
+  border-bottom: 3px solid #000;
+  transition: all 0.15s ease-in-out;
+}
+
+/*Main-End*/
+
