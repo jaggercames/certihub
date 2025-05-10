@@ -33,6 +33,10 @@ body {
   box-shadow: -3px 3px 3px 1px rgba(0, 0, 0, 0.034);
 }
 
+.navbar-content i {
+  display: none;
+}
+
 .navbar-brand {
   user-select: none;
   font-weight: bold;
@@ -166,6 +170,7 @@ body {
 
 .main-first-image img{
   height: 620px;
+  user-select: none;
 }
 
 .main-first-partners {
@@ -177,7 +182,7 @@ body {
 
 .main-first-partners img {
   height: 50px;
-
+  user-select: none;
 }
 
 .main-second-div {
@@ -211,6 +216,7 @@ body {
 .main-second-div img {
   margin-left: 30px;
   height: 180px;
+  user-select: none;
 }
 
 .second-div-green g {
@@ -235,3 +241,35 @@ body {
 
 /*Main-End*/
 
+
+@media (max-width: 1581px) {
+  .second-div-green {
+    font-size: 18px;
+  }
+  .main-second-div img {
+  margin-left: 30px;
+  height: 120px;
+  user-select: none;
+}
+}
+
+@media (max-width: 1200px) {
+  .main-first-div {
+    width: 1200px;
+    height: 400px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px;
+    border-radius: 50px;
+  }
+
+  .main-first-image img{
+    height: 500px;
+    user-select: none;
+  }
+  .navbar-content i {
+    display: block;
+  }
+}
